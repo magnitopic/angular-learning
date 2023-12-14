@@ -1,0 +1,9 @@
+{
+  "/server/": {
+    "target": "http://localhost/alex/servicio_ajax/web_services/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": { "^/server": "" }
+  }
+}

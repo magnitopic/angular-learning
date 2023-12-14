@@ -1,9 +1,17 @@
+<a href="/server/admin">Ir a administración</a>
+
 <h1>Parte cliente!</h1>
 <p>Comunicación de un servicio de angular con un backend en php</p>
 
-<div>
+<!-- <div>
   <button>Empezar</button>
+</div> -->
+
+<div>
+  <a href="#" routerLink="/listado">Listado de productos</a>
+  <br>
+  <a href="#" routerLink="/carrito">Carrito</a>
 </div>
 
 
-<app-listado></app-listado>
+<router-outlet></router-outlet>

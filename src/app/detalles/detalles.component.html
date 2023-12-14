@@ -1,0 +1,14 @@
+<p>Pedir al webservice los datos del producto de id: {{id_disco}}</p>
+
+
+<p>Detalles del disco:</p>
+
+<img width="100px" src="server/imagenes/{{disco.id}}.jpg" alt="">
+
+<p>nombre: {{disco.nombre}}</p>
+<p>artista: {{disco.artista}}</p>
+<p>precio: {{disco.precio}}</p>
+<p>fecha: {{disco.fecha}}</p>
+<p>genero: {{disco.genero}}</p>
+
+<button (click)="agregar_producto_al_carrito()">Agregar producto al carrito</button>

@@ -1,6 +1,6 @@
 {
   "/server/": {
-    "target": "http://localhost/alex/servicio_ajax/web_services/",
+    "target": "http://localhost/alex/servicio_ajax/",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true,

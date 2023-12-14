@@ -1,12 +1,35 @@
 import { Component } from '@angular/core';
+import { TiendaService } from '../services/tienda.service';
+import { DiscoCarrito } from '../model/discoCarrito';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-carrito',
   standalone: true,
-  imports: [],
+  imports: [NgFor],
   templateUrl: './carrito.component.html',
-  styleUrl: './carrito.component.css'
+  styleUrl: './carrito.component.css',
 })
 export class CarritoComponent {
+  discosCarrito: DiscoCarrito[] = {} as DiscoCarrito[];
 
+  constructor(private servicioTienda: TiendaService) {}
+
+  ngOnInit(): void {
+    this.listarDiscosCarrito();
+  }
+
+  listarDiscosCarrito() {
+    this.servicioTienda.obtenerDiscosCarrito().subscribe((discosCarrito) => {
+      this.discosCarrito = discosCarrito;
+    });
+  }
+
+  vaciarCarrito() {
+    alert('Carrito vaciado');
+  }
+
+  realizarPedido() {
+    alert('Pedido realizado');
+  }
 }

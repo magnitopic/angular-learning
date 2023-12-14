@@ -1,1 +1,13 @@
-<p>carrito works!</p>
+<p>Listado de los productos en el carrito:</p>
+
+<div>
+  <div *ngFor="let producto of discosCarrito">
+    <div>Nombre:{{ producto.disco?.nombre }}</div>
+    <div>Artista: {{ producto.disco?.artista }}</div>
+    <div>Cantidad: {{ producto.cantidad }}</div>
+    <hr>
+  </div>
+</div>
+
+<button>Vaciar carrito</button>
+<button>Realizar Pedido</button>

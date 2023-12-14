@@ -12,7 +12,7 @@ import { Disco } from '../model/disco';
 })
 export class DetallesComponent {
   id_disco: number = 0;
-  disco:Disco = {} as Disco;
+  disco: Disco = {} as Disco;
 
   constructor(
     private servicioTienda: TiendaService,
@@ -27,7 +27,10 @@ export class DetallesComponent {
   }
 
   agregar_producto_al_carrito() {
-    console.log('Agregando producto al carrito con id: '+ this.id_disco); 
+    this.servicioTienda.agregarAlCarrito(this.id_disco, 1).subscribe((res) => {
+      res == 'ok'
+        ? alert('Producto agregado al carrito')
+        : alert('Error al agregar el producto al carrito');
+    });
   }
-
 }

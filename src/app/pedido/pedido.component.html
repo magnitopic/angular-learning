@@ -1,0 +1,39 @@
+<div>
+  Rellena los datos de tú pedido:
+<br>
+  <span>Nombre completo:</span>
+  <input
+    type="text"
+    [(ngModel)]="pedido.nombre"
+    [ngModelOptions]="{ standalone: true }"
+  />
+
+  <div>
+    <span>Correo electrónico:</span>
+    <input
+      type="text"
+      [(ngModel)]="pedido.email"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+
+  <div>
+    <span>Dirección completa de envio:</span>
+    <input
+      type="text"
+      [(ngModel)]="pedido.direccion"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+
+  <div>
+    <span>Numero de tarjeta de credito: (no insertar valores reales)</span>
+    <input
+      type="text"
+      [(ngModel)]="pedido.tarjeta"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+
+  <button (click)="finalizarPedido()">Finalizar Pedido</button>
+</div>

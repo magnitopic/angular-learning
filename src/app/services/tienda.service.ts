@@ -3,6 +3,7 @@ import { Disco } from '../model/disco';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { DiscoCarrito } from '../model/discoCarrito';
+import { Pedido } from '../model/pedido';
 
 @Injectable({
   providedIn: 'root',
@@ -43,6 +44,13 @@ export class TiendaService {
   obtenerDiscosCarrito(): Observable<DiscoCarrito[]> {
     return this.http.get<DiscoCarrito[]>(
       this.ruta_webservices + 'web_services/obtenerDiscosCarrito.php'
+    );
+  }
+
+  registrarPedido(p: Pedido): Observable<string> {
+    return this.http.post<string>(
+      this.ruta_webservices + 'web_services/registrarPedido.php',
+      p
     );
   }
 }

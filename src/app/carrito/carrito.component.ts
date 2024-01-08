@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TiendaService } from '../services/tienda.service';
 import { DiscoCarrito } from '../model/discoCarrito';
 import { NgFor } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carrito',
@@ -13,7 +14,7 @@ import { NgFor } from '@angular/common';
 export class CarritoComponent {
   discosCarrito: DiscoCarrito[] = {} as DiscoCarrito[];
 
-  constructor(private servicioTienda: TiendaService) {}
+  constructor(private servicioTienda: TiendaService, private router: Router) {}
 
   ngOnInit(): void {
     this.listarDiscosCarrito();
@@ -30,6 +31,14 @@ export class CarritoComponent {
   }
 
   realizarPedido() {
-    alert('Pedido realizado');
+    if (
+      this.discosCarrito.length == undefined ||
+      this.discosCarrito.length == 0
+    ) {
+      alert('No hay discos en el carrito');
+      return;
+    }
+    this.router.navigate(['/pedido']);
   }
+  
 }

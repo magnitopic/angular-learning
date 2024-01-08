@@ -1,12 +1,12 @@
 <p>Listado de discos:</p>
 
-<div *ngFor = "let d of discos">
-	nombre: {{d.nombre}}<br>
-	artista: {{d.artista}}<br>
-	genero: {{d.genero}}<br>
-	fecha: {{d.fecha}}<br>
-	precio: {{d.precio}}<br>
-	<img width="100px" src="/server/imagenes/{{d.id}}.jpg" alt=""><br>
-	<button (click)="verDetalles(d)">Ver detalles </button>
-	<hr>
+<div *ngFor="let d of discos">
+  nombre: {{ d.nombre }}<br />
+  artista: {{ d.artista }}<br />
+  genero: {{ d.genero }}<br />
+  fecha: {{ d.fecha }}<br />
+  precio: {{ d.precio }}<br />
+  <img width="100px" src="/server/imagenes/{{ d.id }}.jpg" alt="" /><br />
+  <button (click)="verDetalles(d)">Ver detalles</button>
+  <hr />
 </div>

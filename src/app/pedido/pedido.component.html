@@ -1,6 +1,6 @@
 <div>
   Rellena los datos de tú pedido:
-<br>
+  <br />
   <span>Nombre completo:</span>
   <input
     type="text"
@@ -18,6 +18,15 @@
   </div>
 
   <div>
+    <span>Teléfono:</span>
+    <input
+      type="text"
+      [(ngModel)]="pedido.telefono"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+
+  <div>
     <span>Dirección completa de envio:</span>
     <input
       type="text"
@@ -25,12 +34,30 @@
       [ngModelOptions]="{ standalone: true }"
     />
   </div>
+  <p>(no insertar valores reales)</p>
+  <div>
+    <span>Numero de tarjeta de credito: </span>
+    <input
+      type="number"
+      [(ngModel)]="pedido.tarjeta"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
 
   <div>
-    <span>Numero de tarjeta de credito: (no insertar valores reales)</span>
-    <input
+    <span>Caducidad de la tarjeta:</span
+    ><input
       type="text"
-      [(ngModel)]="pedido.tarjeta"
+      [(ngModel)]="pedido.caducidad"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+
+  <div>
+    <span>CVV:</span
+    ><input
+      type="number"
+      [(ngModel)]="pedido.cvv"
       [ngModelOptions]="{ standalone: true }"
     />
   </div>

@@ -9,6 +9,9 @@ $pedido->nombre = $pedidoRecibido->nombre;
 $pedido->email = $pedidoRecibido->email;
 $pedido->direccion = $pedidoRecibido->direccion;
 $pedido->tarjeta = $pedidoRecibido->tarjeta;
+$pedido->telefono = $pedidoRecibido->telefono;
+$pedido->caducidad = $pedidoRecibido->caducidad
+$pedido->cvv = $pedidoRecibido->cvv
 $id_pedido = R::store($pedido);
 
 

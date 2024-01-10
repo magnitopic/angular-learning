@@ -3,7 +3,7 @@ export class Pedido {
   email: string = '';
   direccion: string = '';
   telefono: string = '';
-  tarjeta?: number;
-  caducidad?: string;
-  cvv?: number;
+  tarjeta: string = '';
+  caducidad: string = '';
+  cvv: string = '';
 }

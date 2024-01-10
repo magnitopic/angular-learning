@@ -9,7 +9,7 @@ if (isset($_SESSION["carrito"])) {
 		array_push($cantidades, $elemento[1]);
 	}
 	$ids_sql = implode(",", $ids);
-	$sql = "SELECT * FROM disco WHERE id IN ($ids_sql)";
+	$sql = "SELECT * FROM discos WHERE id IN ($ids_sql)";
 	$discos = R::getAll($sql);
 	$respuesta = array();
 	for ($i=0; $i < count($discos); $i++) { 

@@ -23,7 +23,7 @@
 
 		fecha: <input type="date" name="fecha" /> <br>
 			
-		portada: <input type="file" name="portada"/>
+		portada: <input type="file" id="portada" name="portada"/>
 		<br>	
 		<input type="submit" value="REGISTRAR LIBRO"/>
 	</form>	

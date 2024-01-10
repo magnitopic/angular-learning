@@ -27,7 +27,18 @@ export class CarritoComponent {
   }
 
   vaciarCarrito() {
-    alert('Carrito vaciado');
+    if (
+      this.discosCarrito.length == undefined ||
+      this.discosCarrito.length == 0
+    ) {
+      alert('No hay discos en el carrito');
+      return;
+    }
+    this.servicioTienda.vaciarCarrito().subscribe((res) => {
+      res == 'ok'
+        ? (this.discosCarrito = [])
+        : alert('No se puedo vaciar el carrito');
+    });
   }
 
   realizarPedido() {
@@ -40,5 +51,4 @@ export class CarritoComponent {
     }
     this.router.navigate(['/pedido']);
   }
-  
 }

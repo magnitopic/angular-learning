@@ -6,8 +6,8 @@
     <title>Admin</title>
 </head>
 <body>
-    
-    <?php include("menu.html"); ?>
+
+    <?php include("menu.php"); ?>
 
     <h2>Welcome to the store administration!</h2>
 

@@ -47,6 +47,10 @@ export class TiendaService {
     );
   }
 
+  vaciarCarrito():Observable<string>{
+    return this.http.get<string>(this.ruta_webservices + "web_services/vaciarCarrito.php");
+  }
+
   registrarPedido(p: Pedido): Observable<string> {
     return this.http.post<string>(
       this.ruta_webservices + 'web_services/registrarPedido.php',

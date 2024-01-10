@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php session_start(); ?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 </head>
 <body>
 	
-	<?php include("menu.html") ?>
+	<?php include("menu.php") ?>
 
 	introduce los datos del nuevo disco:
 

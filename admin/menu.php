@@ -1,3 +1,11 @@
+<?php
+
+if( ! isset( $_SESSION["admin"] ) ){
+    include("login_admin.php");
+    die();//esto corta la ejecucion de php
+}
+?>
+
 <div>
     bienvenido a la administracion de la tienda de discos
 </div>

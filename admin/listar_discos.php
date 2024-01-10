@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php session_start(); ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 </head>
 <body>
     
-<?php include("menu.html"); ?>
+<?php include("menu.php"); ?>
 <div>
     Listado de discos de la tienda:
 </div>
@@ -21,9 +21,11 @@
             fecha:  <?= $disco["fecha"] ?> <br>
             precio:  <?= $disco["precio"] ?> <br>
             portada: <img src="../imagenes/<?= $disco["id"]?>.jpg" height="120"/>
+            <br>
+            <a onclick="return confirm('¿Confirmar?')" href="?idBorrar=<?= $disco["id"]?>">Borrar producto</a>
         </div>
     <?php
-    }//end foreach discos
+    }
     ?>
 
 </body>

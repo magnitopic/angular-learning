@@ -9,7 +9,7 @@ import { Pedido } from '../model/pedido';
   providedIn: 'root',
 })
 export class TiendaService {
-  //ruta_webservices = '/entregas/servicio_ajax/web_services/';
+  //ruta_webservices = '/entregas/tienda_angular_php_2024/web_services/';
 
   ruta_webservices = '/server/';
 

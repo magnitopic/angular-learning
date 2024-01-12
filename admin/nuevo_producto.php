@@ -13,19 +13,19 @@
 
 	<form action="registrar_producto.php" method="post" enctype="multipart/form-data" >
 		
-		Nombre: <input type="text" name="nombre" /> <br>
+		Nombre: <input type="text" name="nombre" minlength="2" maxlength="20" /> <br>
 		
-		Artista: <input type="text" name="artista" /> <br>
+		Artista: <input type="text" name="artista" minlength="1" maxlength="30"/> <br>
 		
 		precio: <input type="number" step=".01" name="precio" /> <br>
 
-		genero: <input type="text" name="genero" /> <br>
+		genero: <input type="text" name="genero" minlength="2" maxlength="20"/> <br>
 
 		fecha: <input type="date" name="fecha" /> <br>
 			
-		portada: <input type="file" id="portada" name="portada"/>
+		portada: <input type="file" name="portada"/>
 		<br>	
-		<input type="submit" value="REGISTRAR LIBRO"/>
+		<input type="submit" value="Registrar Disco"/>
 	</form>	
 
 </body>

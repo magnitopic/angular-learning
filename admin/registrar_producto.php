@@ -1,4 +1,5 @@
 <?php
+session_start();
 //recibe el form de nuevo_producto.php y lo registra en bd
 
 require "../librerias_php/setup_red_bean.php";

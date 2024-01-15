@@ -12,30 +12,30 @@ export class Validator {
   regexp_cvv: RegExp = /^[0-9]{3}$/;
 
   validarNombre(nombre: string): boolean {
-    return this.regexp_nombre.test(nombre) || (nombre != undefined);
+    return this.regexp_nombre.test(nombre) && nombre != undefined;
   }
 
   validarDireccion(direccion: string): boolean {
-    return this.regexp_direccion.test(direccion) && (direccion != undefined);
+    return this.regexp_direccion.test(direccion) && direccion != undefined;
   }
 
   validarTarjeta(tarjeta: string): boolean {
-    return this.regexp_tarjeta.test(tarjeta) || (tarjeta != undefined);
+    return this.regexp_tarjeta.test(tarjeta) && tarjeta != undefined;
   }
 
   validarCaducidad(caducidad: string): boolean {
-    return this.regexp_caducidad.test(caducidad) || (caducidad != undefined);
+    return this.regexp_caducidad.test(caducidad) && caducidad != undefined;
   }
 
   validarCVV(cvv: string): boolean {
-    return this.regexp_cvv.test(cvv) || (cvv != undefined);
+    return this.regexp_cvv.test(cvv) && cvv != undefined;
   }
 
   validarEmail(email: string): boolean {
-    return this.regexp_email.test(email) || (email != undefined);
+    return this.regexp_email.test(email) && email != undefined;
   }
 
   validarTelefono(telefono: string): boolean {
-    return this.regexp_telefono.test(telefono) || (telefono != undefined);
+    return this.regexp_telefono.test(telefono) && telefono != undefined;
   }
 }
